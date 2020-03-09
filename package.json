@@ -1,6 +1,6 @@
 {
   "name": "webgl-buffers",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "js/index.js",
   "scripts": {
@@ -20,6 +20,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@ava/babel": "^1.0.1",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.6",
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
@@ -40,7 +41,9 @@
   "types": "es/index.d.ts",
   "module": "es/index.js",
   "ava": {
-    "compileEnhancements": false,
+    "babel": {
+      "compileEnhancements": false
+    },
     "extensions": [
       "ts"
     ],

@@ -1,7 +1,7 @@
 import * as NdArray from 'ndarray';
-import Texture from './Texture';
+import { Texture } from './Texture';
 
-export default class DataTexture extends Texture {
+export class DataTexture extends Texture {
   private readonly data: Uint8Array;
   private readonly data32: Uint32Array;
   private readonly map: NdArray;

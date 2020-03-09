@@ -24,7 +24,7 @@ export interface TextureParameters {
   readonly WrapT?: 'REPEAT' | 'CLAMP_TO_EDGE' | 'MIRRORED_REPEAT'
 }
 
-export default class Texture implements TextureBuffer {
+export class Texture implements TextureBuffer {
   readonly gl: WebGLRenderingContext;
   readonly texture: WebGLTexture;
   readonly size: vec2;

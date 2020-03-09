@@ -2,7 +2,7 @@ import * as NdArray from 'ndarray';
 
 import { VertexBuffer, FrameBuffer } from './types';
 import { AtomicBind } from "./AtomicBind";
-import AbstractBindlable from './AbstractBindable';
+import { AbstractBindlable } from './AbstractBindable';
 
 export interface Rect {
   readonly x: number,
@@ -16,7 +16,7 @@ export type Quad = {
   readonly pos: Rect
 }
 
-export default class QuadList extends AbstractBindlable implements VertexBuffer {
+export class QuadList extends AbstractBindlable implements VertexBuffer {
   private readonly gl: WebGLRenderingContext;
   private size: number;
   private vertices: Float32Array;

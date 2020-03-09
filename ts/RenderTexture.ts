@@ -1,9 +1,9 @@
-import Texture, { TextureParameters } from './Texture';
+import { Texture, TextureParameters } from './Texture';
 
 import { FrameBuffer } from './types';
 import { AtomicBind } from "./AtomicBind";
 
-export default class RenderTexture extends Texture implements FrameBuffer {
+export class RenderTexture extends Texture implements FrameBuffer {
   private readonly frameBuffer: WebGLFramebuffer;
   private readonly renderBuffer: WebGLRenderbuffer;
   private readonly blend: boolean;
@@ -49,5 +49,7 @@ export default class RenderTexture extends Texture implements FrameBuffer {
     this.gl.framebufferTexture2D(this.gl.FRAMEBUFFER, this.gl.COLOR_ATTACHMENT0, this.gl.TEXTURE_2D, this.texture, 0);
   }
 
-  bind() { }
+  bind() {
+    // @ts-ignore
+  }
 }

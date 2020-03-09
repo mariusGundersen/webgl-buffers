@@ -2,7 +2,7 @@ import * as NdArray from 'ndarray';
 
 import { VertexBuffer, FrameBuffer } from './types';
 import { AtomicBind } from "./AtomicBind";
-import AbstractBindlable from './AbstractBindable';
+import { AbstractBindlable } from './AbstractBindable';
 
 export interface Point {
   readonly x: number,
@@ -11,7 +11,7 @@ export interface Point {
   readonly t: number
 }
 
-export default class PointList extends AbstractBindlable implements VertexBuffer {
+export class PointList extends AbstractBindlable implements VertexBuffer {
   private readonly gl: WebGLRenderingContext;
   private size: number;
   private vertices: Float32Array;

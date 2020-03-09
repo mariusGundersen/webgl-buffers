@@ -1,4 +1,5 @@
 import { Bindable } from './types';
+
 export class AtomicBind {
   private currentBind: Bindable | undefined = undefined;
   bind(bindable: Bindable) {

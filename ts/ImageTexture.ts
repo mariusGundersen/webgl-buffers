@@ -1,8 +1,6 @@
-import { vec2 } from 'gl-matrix';
+import { Texture } from './Texture';
 
-import Texture from './Texture';
-
-export default class ImageTexture extends Texture {
+export class ImageTexture extends Texture {
   constructor(gl: WebGLRenderingContext, image: HTMLImageElement) {
     super(gl, image.width, image.height);
 

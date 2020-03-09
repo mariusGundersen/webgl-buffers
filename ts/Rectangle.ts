@@ -1,8 +1,8 @@
 import { VertexBuffer, FrameBuffer } from './types';
 import { AtomicBind } from "./AtomicBind";
-import AbstractBindlable from './AbstractBindable';
+import { AbstractBindlable } from './AbstractBindable';
 
-export default class Rectangle extends AbstractBindlable implements VertexBuffer {
+export class Rectangle extends AbstractBindlable implements VertexBuffer {
   private readonly gl: WebGLRenderingContext;
   private readonly vertexBuffer: WebGLBuffer;
   private readonly indexBuffer: WebGLBuffer;

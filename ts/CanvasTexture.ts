@@ -1,8 +1,8 @@
 import { vec2 } from 'gl-matrix';
 
-import Texture from './Texture';
+import { Texture } from './Texture';
 
-export default class CanvasTexture extends Texture {
+export class CanvasTexture extends Texture {
   readonly canvas: HTMLCanvasElement;
   readonly ctx: CanvasRenderingContext2D;
   constructor(gl: WebGLRenderingContext, width: number, height = width) {

@@ -1,6 +1,6 @@
 import { AtomicBind } from "./AtomicBind";
 
-export default abstract class AbstractBindlable {
+export abstract class AbstractBindlable {
   constructor(atomicBind: AtomicBind) {
     this.bind = atomicBind.bind(this);
   }
@@ -8,5 +8,6 @@ export default abstract class AbstractBindlable {
   abstract _bind(): void;
 
   bind() {
+    // @ts-ignore
   }
 }

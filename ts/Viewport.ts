@@ -1,8 +1,8 @@
 import { FrameBuffer } from "./types";
 import { AtomicBind } from "./AtomicBind";
-import AbstractBindlable from "./AbstractBindable";
+import { AbstractBindlable } from "./AbstractBindable";
 
-export default class Viewport extends AbstractBindlable implements FrameBuffer {
+export class Viewport extends AbstractBindlable implements FrameBuffer {
   readonly gl: WebGLRenderingContext;
   width: number;
   height: number;
